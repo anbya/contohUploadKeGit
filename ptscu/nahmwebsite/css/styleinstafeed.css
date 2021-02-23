@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+$lg: 580px;
+
+html, 
+body {
+  margin: 0;
+  padding: 10px;
+  background: darken(whitesmoke, 10%);
+}
+#instafeed {
+  width: 100%;
+  display: flex;
+  
+  a {
+    position: relative;
+    width: 50%;
+    
+    @media only screen and (min-width: $lg) {
+      width: 25%
+    }
+    
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    div.footer {
+      width: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: .5rem 1rem;
+      background: transparentize(dodgerblue, 0.2);
+      font-size: .8rem;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+      text-transform: uppercase;
+     
+      img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin-right: .5rem;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+      }
+    }
+    div.user {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    div.caption {
+      height: 0;
+      opacity: 0;
+      margin-bottom: 0;
+      background: rgba(0,0,0,0.2);
+    }
+    &:hover .caption,
+    &:focus .caption {
+      margin: -.5rem -1rem .5rem;
+      padding: .5rem 1rem;
+      opacity: 1;
+      height: auto;
+    }
+  }
+}

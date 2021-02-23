@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Under Construction</title>
+  </head>
+<body bgcolor="#000000">
+  <table width="100%" height="100%">
+    <tr>
+      <td align=middle valign=middle width="20%"></td>
+      <td align=middle valign=middle width="60%">
+        <img src=uc19.gif>
+        <br />
+        <font color=white size=5>Maaf, situs <!--#echo var="SERVER_NAME" --> masih dalam pembangunan.</font>
+        <br />
+        <br />
+        <font color="#dddddd" size=4><i>Sorry, this <!--#echo var="SERVER_NAME" --> website is still under construction.</i></font>
+        <br />
+        <br />
+        <br />
+        <font color="#dddddd" size=3>Ini adalah halaman default. Jika Anda pemilik situs ini, silakan mulai mengatur situs Anda dengan login ke control panel hosting <a href=/cpanel/><font color="#aaaaaa">cPanel</font></a> untuk upload file, instalasi skrip, dll. Halaman default ini dapat Anda timpa dengan milik Anda sendiri nantinya. Bila butuh bantuan, silakan baca <a href=http://kb.masterweb.net/beta/r/Panduan_pengguna_shared_hosting><font color="#aaaaaa">Panduan Pengguna Shared Hosting</font></a> kami.</font>
+        <br />
+        <br />
+        <font color="#dddddd" size=3><i>If you are the owner of this website, you can start managing your website by logging in to <a href=/cpanel/><font color="#aaaaaa">cPanel</font></a> control panel to upload files, etc. Or, please consult our <a href=http://kb.masterweb.net/beta/r/Panduan_pengguna_shared_hosting><font color="#aaaaaa">Getting Started Guide</font></a>.</i></font>
+        <br />
+        <br />
+        <br />
+        <font color="#dddddd" size=2>Hosted by MWN<br /></font><a href=http://www.masterweb.net><img border=0 src=mwn_small_emblem3.gif></a>
+      </td>
+      <td align=middle valign=middle width="20%"></td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,2 @@
+IAT2305190946
+localhost/bypos/escpos/reprintclosedayreport.php?user=ISU000012&idterminal=IAT2305190946

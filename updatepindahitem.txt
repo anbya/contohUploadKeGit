@@ -1,0 +1,132 @@
+                                        <?php
+                                        include "koneksi.php";
+                                        $cekpindahitmprm=mysqli_query($koneksi,"SELECT * FROM pos_promotion_h where notrans = '$transtempprm' ");
+                                        $hcekpindahitmprm = mysqli_fetch_array($cekpindahitmprm);
+                                        $rcekpindahitmprm = mysqli_num_rows($cekpindahitmprm);
+                                        $cekpindahitmpym=mysqli_query($koneksi,"SELECT * FROM pos_paymenttemp where NoTrans = '$transtempprm' ");
+                                        $hcekpindahitmpym = mysqli_fetch_array($cekpindahitmpym);
+                                        $rcekpindahitmpym = mysqli_num_rows($cekpindahitmpym);
+                                        if($rcekpindahitmprm>0 OR $rcekpindahitmpym>0)
+                                        {
+                                        ?>
+                                        <script>
+                                        function pindahitemalert() {
+                                        alert("PINDAH ITEM TIDAK DAPAT DI PROSES JIKA SUDAH ADA PROMOSI ATAU PEMBAYARAN");
+                                        }
+                                        </script>
+                                        <div class="col-md-3 nopadding">
+                                        <a href="#" class="btn btn-nahm btn-block maxwidthheight" onclick="pindahitemalert()" style="padding-left: 0px;padding-right: 0px;">PINDAH ITEM KE BILL LAIN</a>
+                                        </div>
+                                        <?php
+                                        }
+                                        else
+                                        {
+                                        ?>
+                                        <div class="col-md-3 nopadding">
+                                        <a href="#" class="btn btn-nahm btn-block maxwidthheight" data-toggle="modal" data-target="#modalpindahitem" style="padding-left: 0px;padding-right: 0px;">PINDAH ITEM KE BILL LAIN</a>
+                                        </div>
+                                        <!--Modal: pindahitemkebilllain-->
+                                            <div class="modal fade" id="modalpindahitem" tabindex="-1" role="dialog" aria-labelledby="modalpindahitem" aria-hidden="true">
+                                                <div class="modal-dialog cascading-modal" role="document">
+                                                    <!--Content-->
+                                                    <div class="modal-content">
+
+                                                        <!--Modal cascading tabs-->
+                                                        <div class="modal-c-tabs">
+
+                                                            <!-- Nav tabs -->
+                                                            <ul class="nav nav-tabs tabs-2" role="tablist">
+                                                                <li class="nav-item">
+                                                                    <a class="btn btn-nahm btn-block" data-toggle="tab" href="#panel171" role="tab">PILIH ITEM YANG AKAN DI PINDAH</a>
+                                                                </li>
+                                                            </ul>
+
+                                                            <!-- Tab panels -->
+                                                            <form action="prosespindahitem.php" method="post">
+                                                            <div class="tab-content">
+                                                                <!--Panel 17-->
+                                                                <div class="tab-pane fade in show active" id="panel171" role="tabpanel">
+
+                                                                    <!--Body-->
+                                                                    <div class="modal-body mb-1">
+                                                                        <input type="hidden" name ="prmpindahitem1" value="<?php echo $transtempprm;?>" style="width: 100%;">
+                                                                        <input type="hidden" name ="idterminal" value="<?php echo $idterminal;?>" style="width: 100%;">
+                                                                        <div class="row" style="margin: 0px;padding: 0px;">
+                                                                            <div class="col-8" style="padding: 3px;margin: 0px;"><strong>NAMA MENU</strong></div>
+                                                                            <div class="col-4" style="padding: 3px;margin: 0px;"><strong>JUMLAH</strong></div>
+                                                                        </div>
+                                                                        <?php
+                                                                        include "koneksi.php";
+                                                                        $sqlplu=mysqli_query($koneksi,"SELECT * FROM pos_itemtemp where transtemp = '$transtemp'  group by kditem");
+                                                                        while($hsqlplu = mysqli_fetch_array($sqlplu))
+                                                                        {
+                                                                        $qtycek=$hsqlplu['kditem'];
+                                                                        $pndhcek="1".$hsqlplu['kditem'];
+                                                                        $fetchitem = "SELECT * FROM pos_item WHERE kditem = '$qtycek'";
+                                                                        $resultfetchitem = mysqli_query($koneksi,$fetchitem) or die (mysqli_error());
+                                                                        $hresultfetchitem= mysqli_fetch_array($resultfetchitem);
+                                                                        $sumqtyitemvoid=mysqli_query($koneksi,"SELECT SUM(qty) AS sumsqty FROM pos_itemtemp where kditem = $qtycek AND transtemp ='$transtempprm' ");
+                                                                        $hsumqtyitemvoid = mysqli_fetch_array($sumqtyitemvoid);
+                                                                        $maxqtypndh=$hsumqtyitemvoid['sumsqty'];
+                                                                        ?>
+                                                                        <div class="row" style="margin: 0px;padding: 0px;">
+                                                                            <div class="col-8" style="padding: 3px;margin: 0px;"><strong><?php echo $hresultfetchitem['nmitem'];?> (<?php echo $maxqtypndh;?>)</strong></div>
+                                                                            <div class="col-4" style="padding: 3px;margin: 0px;">
+                                                                                <button type="button" onclick="min(<?php echo $pndhcek;?>)"><b>-</b></button>
+                                                                                <input type="text" id="<?php echo $pndhcek;?>" name ="<?php echo $qtycek;?>" value="0" style="width: 40%;text-align:center;">
+                                                                                <button type="button" onclick="plus(<?php echo $pndhcek;?>,<?php echo $maxqtypndh;?>)"><b>+</b></button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
+                                                                        <div class="row" style="margin: 0px;padding: 0px;">
+                                                                            <div class="col-12" style="padding: 3px;margin: 0px;">
+                                                                                <select class="form-control" name="prmpindahitem2" required>
+                                                                                <option value="" disabled selected>PILIH BILL TUJUAN</option>
+                                                                                <?php
+                                                                                include "koneksi.php";
+                                                                                $postemp=mysqli_query($koneksi,"SELECT * FROM pos_salestemp where status = 'OPEN' ");
+                                                                                while($hpostemp = mysqli_fetch_array($postemp))
+                                                                                {
+                                                                                $opentrans=$hpostemp['notrans'];
+                                                                                $tabletrans=$hpostemp['meja'];
+                                                                                /*pos table*/
+                                                                                if($tabletrans!="takeaway")
+                                                                                {
+                                                                                $viewpostable1=mysqli_query($koneksi,"SELECT * FROM pos_table where notrans = '$opentrans' ");
+                                                                                $hviewpostable1 = mysqli_fetch_array($viewpostable1);
+                                                                                $namatable=$hviewpostable1['nama_table']."/".$opentrans;
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                $namatable=$tabletrans."/".$opentrans;
+                                                                                }
+                                                                                /*pos table*/
+                                                                                ?>
+                                                                                <option value="<?php echo $opentrans;?>"><?php echo $namatable;?></option>
+                                                                                <?php
+                                                                                }
+                                                                                ?>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row" style="margin: 0px;padding: 0px;">
+                                                                            <div class="col-12" style="padding: 3px;margin: 0px;"><button class="btn btn-nahm btn-block" type="submit" id="btnputorder">PROSES PINDAH ITEM</button></div>
+                                                                        </div>
+                                                                        <div class="row" style="margin: 0px;padding: 0px;">
+                                                                            <div class="col-12" style="padding: 3px;margin: 0px;"><a class="btn btn-nahm btn-block" role="button" href="index.php?transtempprm=<?php echo $transtempprm;?>" id="btnvoidorder">BATAL</a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--Body-->
+                                                                </div>
+                                                                <!--/.Panel 17-->
+                                                            </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <!--/.Content-->
+                                                </div>
+                                            </div>
+                                        <!--Modal: pindahitemkebilllain-->
+                                        <?php } ?>

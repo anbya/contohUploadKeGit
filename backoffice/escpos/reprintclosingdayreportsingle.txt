@@ -1,0 +1,2 @@
+IAT2305190946
+localhost/isoidebackoffice/escpos/reprintclosedayreportsingle.php?idterminal=IAT2405191024

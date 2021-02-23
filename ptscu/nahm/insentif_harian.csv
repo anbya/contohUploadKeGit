@@ -1,0 +1,83 @@
+IH0001,OB/OG,Staf,1A1,Transport,25000
+IH0002,Store,Staf,1A2,Transport,12000
+IH0003,Store,Staf,1A3,Transport,14000
+IH0004,Supir,Staf,1B1,Transport,25000
+IH0005,Store,Staf,1B2,Transport,12000
+IH0006,Store,Staf,1B3,Transport,14000
+IH0007,Security,Staf,1C1,Transport,17500
+IH0008,Store,Staf,,Transport,14000
+IH0009,Store,Staf,1D1,Transport,15000
+IH0010,Teknisi,Staf,1E1,Transport,25000
+IH0011,Store,Staf,1F1,Harian,15000
+IH0012,Administration & Finance,Staf,1G1,Transport,25000
+IH0013,Supir,Staf,2C1,Transport,20000
+IH0014,Store,Staf,,Transport,25000
+IH0015,Store,VM,2A1,Transport,15000
+IH0016,Store,VM,2A2,Transport,12000
+IH0017,Store,VM,,Transport,12000
+IH0018,Store,Sr Staff/Kasir/Kontrak/JKT,2D1,Harian,15000
+IH0019,Teknisi,Senior Staff,2E1,Transport,25000
+IH0020,Receptionist,Staf,2F1,Transport,17500
+IH0021,Receptionist,Staf,,Transport,17500
+IH0022,Gudang,Koordinator,3A1,Transport,25000
+IH0023,Store,Assistant Supervisor,3A2,Transport,15000
+IH0024,Store,Assistant Supervisor,3A3,Transport,17000
+IH0025,Store,Assistant Supervisor,3B1,Transport,20000
+IH0026,Store,Assistant Supervisor,3B3,Transport,17000
+IH0027,Store,Assistant Supervisor,3C1,Harian,20000
+IH0028,Administration & Finance,Koordinator,3D1,Transport,25000
+IH0029,Store,Jr. Supervisor/Kontrak/JKT,4A1,Harian,20000
+IH0030,,,4A2,Transport,15000
+IH0031,,,4A3,Transport,17000
+IH0032,Gudang,Supervisor,4B1,Transport,17500
+IH0033,Store,Jr. Supervisor/Kontrak/JKT,4C1,Harian,20000
+IH0034,Assistant IT Support,Supervisor,4D1,Transport,25000
+IH0035,Administration & Finance,Staf,,Transport,25000
+IH0036,Assistant IT Support,Supervisor,,Transport,17500
+IH0037,Accounting,supervisor,,Transport,17500
+IH0038,Teknisi,Supervisor,,Transport,17500
+IH0039,HR Generalist,Supervisor,5C,Transport,17500
+IH0040,Merchandiser,Supervisor,5D,Transport,25000
+IH0041,Teknisi,Supervisor,5E,Transport,30000
+IH0042,,,6A,Transport,30000
+IH0043,Retail Operational Store (ROS),Area Supervisor,6B,Transport,30000
+IH0044,Accounting,supervisor,6D,Transport,17500
+IH0045,IT,Supervisor,6E,Transport,50000
+IH0046,,,10A,Transport,0
+IH0047,,,10B,Transport,0
+IH0048,,,10C,Transport,0
+IH0049,,,10D,Transport,0
+IH0050,,,10E,Transport,0
+IH0051,,,8E,Transport,0
+IH0052,,,8A,Transport,0
+IH0053,Store,Sr Staff/Kasir/Kontrak/JKT,2B3,Transport,14000
+IH0054,Account Receivable,Supervisor,6C,Transport,30000
+IH0055,Store,Assistant Supervisor,3E1,Transport,10000
+IH0056,Store,Assistant Supervisor,3F1,Transport,15000
+IH0057,Store,Assistant Supervisor,,Transport,20000
+IH0058,Store,Assistant Supervisor,3B2,Transport,15000
+IH0059,Store,Assistant Supervisor,,Transport,15000
+IH0060,Store,Jr. Supervisor/Kontrak/SBY,4B3,Harian,17000
+IH0061,Store,Assistant Supervisor,,Transport,17000
+IH0062,,,4B2,Transport,15000
+IH0063,Assistant Fit Out,Asst Fit Out,5F,Transport,17500
+IH0064,Merchandiser,Supervisor,5G,Transport,30000
+IH0065,Merchandiser,Supervisor,6F,Transport,30000
+IH0066,Store,Supervisor/Kontrak/JKT,5A1,Harian,25000
+IH0067,Store,Supervisor/Kontrak/JKT,5B1,Harian,25000
+IH0068,,,5A2,Transport,20000
+IH0069,,,5B2,Transport,20000
+IH0070,,,5A3,Transport,20000
+IH0071,,,5B3,Transport,20000
+IH0072,OB/OG,Staf,1I1,Harian,17500
+IH0073,Security,Staf,1K1,Transport,17500
+IH0074,Store,VM,1L1,Harian,15000
+IH0075,Store,Sr Staff/Kasir/Kontrak/JKT,2B1,Harian,15000
+IH0076,Store,Sr Staff/Kasir/Kontrak/SBY,2D3,Harian,14000
+IH0077,Store,Supervisor/Kontrak/SBY,4D3,Harian,20000
+IH0078,Store,cashier-senior staff,2A3,Harian,14000
+IH0079,Store,Supervisor/Probation/BDG,4C2,Harian,20000
+IH0080,Supir,Staf,2E2,Harian,20000
+IH0081,HR Generalist,Supervisor,7C,Harian,30000
+IH0082,Teknisi,Staf,1N1,Transport,17500
+IH0083,Store,Sr Staff/Kasir/Kontrak/BDG,2B2,Transport,12000

@@ -1,0 +1,1 @@
+[17-Jul-2018 17:18:25 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/k3164444/public_html/nahmcrm/koneksi.php on line 7

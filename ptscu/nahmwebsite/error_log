@@ -1,0 +1,14 @@
+[04-May-2018 06:54:09 UTC] PHP Warning:  file_get_contents(https://api.instagram.com/v1/tags/#food/media/recent?access_token=7659099746.3b2791c.a70d941c433f4b42a090da4d0252a22d): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/k3164444/public_html/nahmwebsite/testlivewall.php on line 201
+[04-May-2018 06:54:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/k3164444/public_html/nahmwebsite/testlivewall.php on line 207
+[04-May-2018 06:54:21 UTC] PHP Warning:  file_get_contents(https://api.instagram.com/v1/tags/food/media/recent?access_token=7659099746.3b2791c.a70d941c433f4b42a090da4d0252a22d): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /home/k3164444/public_html/nahmwebsite/testlivewall.php on line 201
+[04-May-2018 06:54:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/k3164444/public_html/nahmwebsite/testlivewall.php on line 207
+[04-May-2018 06:54:52 UTC] PHP Warning:  file_get_contents(https://api.instagram.com/v1/tags/#food/media/recent?access_token=7659099746.3b2791c.a70d941c433f4b42a090da4d0252a22d): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/k3164444/public_html/nahmwebsite/testlivewall.php on line 201
+[04-May-2018 06:54:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/k3164444/public_html/nahmwebsite/testlivewall.php on line 207
+[04-May-2018 09:00:13 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/k3164444/public_html/nahmwebsite/testlivewall.php on line 217
+[04-May-2018 09:02:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/k3164444/public_html/nahmwebsite/testlivewall.php on line 217
+[04-May-2018 09:02:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/k3164444/public_html/nahmwebsite/testlivewall.php on line 217
+[04-May-2018 09:03:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/k3164444/public_html/nahmwebsite/testlivewall.php on line 217
+[04-May-2018 09:18:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/k3164444/public_html/nahmwebsite/testlivewall.php on line 217
